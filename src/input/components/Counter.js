@@ -1,28 +1,25 @@
-import React,{Component, PropTypes } from 'react'
-import addComponent from './Add'
+import React,{ Component } from 'react'
+
+const style = {
+  textAlign: 'center'
+}
 
 class Counter extends Component {
-	static propTypes = {
-		value: PropTypes.number.isRequired,
-		onIncreament: PropTypes.func.isRequired,
-		onDecreament: PropTypes.func.isRequired
-	}
 	
-	incrementIfOdd = () => {
-		console.log(this.props.value%2!==0)
-		if (this.props.value % 2 !==0){
-			this.props.onIncrement()
-		} 
-	}
-	 
-	incrementAsync = () => {
+  incrementIfOdd = () => {
+    if(this.props.value % 2 !==0) {
+      this.props.onIncrement()
+    } 
+  }
+  
+  incrementAsync = () => {
     setTimeout(this.props.onIncrement, 1000)
   }
 	
-	  render() {
+  render() {
     const { value, onIncrement, onDecrement } = this.props
     return (
-      <div>
+      <div style={ style }>
         Clicked: {value} times
         {' '}
         <button onClick={onIncrement}>
@@ -40,7 +37,6 @@ class Counter extends Component {
         <button onClick={this.incrementAsync}>
           Increment async
         </button>
-				<addComponent />
       </div>
     )
   }
