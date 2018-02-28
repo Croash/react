@@ -9,7 +9,7 @@ class Base extends Component {
 
   renderChildren() {
     const childrenWithProps = Children.map(this.props.children,
-      (child) => React.cloneElement(child, { ...this.props }))
+      (child) => child!=null ? React.cloneElement(child, { ...this.props }) : null ) 
     return childrenWithProps
   }
 
