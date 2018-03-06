@@ -21,13 +21,13 @@ class SideBar extends Component {
   }
 
   handleChange = (event, index) => {
-  
+    console.log(index)
     this.setState({ selectedIndex: index })
     // this.context.router.push(index)
   }
 
   render() { 
-    const { categories = [ { title: 1 }, { title: 2 } ] } = this.props
+    const { categories = [ { title: 1, logo:'12g' }, { title: 2, logo: 'sg' } ] } = this.props
     
     return (
       <SelectableList style={this.style} 
@@ -40,11 +40,12 @@ class SideBar extends Component {
               style={this.style.iconStyles}>sg</FontIcon>
           } />
         {categories.map((item, index) => {
+          console.log(index)
           return (
             <ListItem
               key={index}
                 primaryText={item.title}
-              value={'/posts/" + item._id + "/1'} leftIcon={
+              value={`/posts/item._id/${index}`} leftIcon={
                 <FontIcon className="material-icons"
                   style={this.style.iconStyles}>{item.logo}</FontIcon>
                 } />)
