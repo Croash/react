@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
-import Base from './Base'
+import Wrap from './Wrap'
 import Counter from './Counter'
+import Content from './Content'
 import Header from './Header'
 import MBtn from './Btn'
 import MBar from './Bar'
@@ -12,14 +13,12 @@ class Combine extends Component {
   }
   render() {
     return (
-      <Base { ...this.props }>
+      <Wrap { ...this.props }>
         <MBar/>
         <Header/>
         <Counter/>
-        <MBtn/>
         <NaviMenu/>
-
-      </Base>
+      </Wrap>
     )
   }
 }

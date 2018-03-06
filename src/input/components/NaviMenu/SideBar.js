@@ -27,7 +27,12 @@ class SideBar extends Component {
   }
 
   render() { 
-    const { categories = [ { title: 1, logo:'12g' }, { title: 2, logo: 'sg' } ] } = this.props
+    const { categories = [ 
+      { title: 'WORK', logo:'w' }, 
+      { title: 'STUDY', logo: 's' },
+      { title: 'LIFE', logo: 'l' },
+      { title: 'CHICKEN', logo: 'c' }
+    ] } = this.props
     
     return (
       <SelectableList style={this.style} 

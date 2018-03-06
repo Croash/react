@@ -1,4 +1,4 @@
-import Base from './Base'
+import Base from './Wrap'
 import Counter from './Counter'
 import Combine from './Combine'
 

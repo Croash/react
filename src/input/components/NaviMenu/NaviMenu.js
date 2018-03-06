@@ -7,7 +7,7 @@ import SelectLink from './SelectLink'
 import SideBar from './SideBar'
 
 const style = {
-  paddingTop: '1%' 
+  paddingTop: '5%' 
 }
 
 const NavigationMenu = () => (
