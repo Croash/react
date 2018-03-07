@@ -9,7 +9,7 @@ class AppFooter extends Component {
     footer: {
       marginTop: '8%', marginLeft: '10%',
       marginRight: '0%', marginBottom: '3%',
-      textAlign: 'center',
+      textAlign: 'center'
       // backgroundColor: Colors.grey900
     }, a: {
       color: 'darkWhite'
@@ -23,12 +23,6 @@ class AppFooter extends Component {
 
   render() {
     
-    if (this.context.router.isActive('admin')) {
-      this.style.footer = {
-        textAlign: 'center',
-        // backgroundColor: Colors.grey900
-      }
-    }
     return (
       <Section style={this.style.footer}>
         <p style={this.style.p}>Code Crafted by Song Zhou &copy 2018</p>

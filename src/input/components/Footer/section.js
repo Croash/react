@@ -1,3 +1,4 @@
+
 import React, { Component, PropTypes } from 'react'
 import ClearFix from 'material-ui/internal/ClearFix'
 import spacing from 'material-ui/styles/spacing'
@@ -10,7 +11,7 @@ class Section extends Component {
   static defaultProps = {
     useContent: false,
     contentType: 'div'
-  };
+  }
 
   getStyles() {
     return {

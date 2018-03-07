@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Drawer from 'material-ui/Drawer'
 import Divider from 'material-ui/Divider'
 
@@ -10,13 +9,23 @@ const style = {
   paddingTop: '5%' 
 }
 
-const NavigationMenu = () => (
-  <Drawer docked={true} containerStyle={style}>
-    <SideBar/>
-    <Divider /> 
-    <br />
-    <SelectLink/>
-  </Drawer>
-)
+class NavigationMenu extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    const { open = false } = this.props
+    return (
+      <Drawer 
+        open={open}
+        docked={true} containerStyle={style}>
+        <SideBar/>
+        <Divider /> 
+        <br />
+        <SelectLink/>
+      </Drawer>
+    )
+  }
+}
 
 export default NavigationMenu
