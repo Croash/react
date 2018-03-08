@@ -1,5 +1,5 @@
 
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import ClearFix from 'material-ui/internal/ClearFix'
 import spacing from 'material-ui/styles/spacing'
 import withWidth, { SMALL, LARGE } from 'material-ui/utils/withWidth'
@@ -37,7 +37,7 @@ class Section extends Component {
   render() {
     const {
       style,
-      useContent,
+      useContent=true,
       contentType,
       contentStyle,
       width,

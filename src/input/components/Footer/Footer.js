@@ -7,10 +7,10 @@ class AppFooter extends Component {
   
   style = {
     footer: {
-      marginTop: '8%', marginLeft: '10%',
-      marginRight: '0%', marginBottom: '3%',
-      textAlign: 'center'
-      // backgroundColor: Colors.grey900
+      marginTop: '30px', marginLeft: '0%',
+      marginRight: '0%', marginBottom: '30px',
+      textAlign: 'center',
+      backgroundColor: 'grey'
     }, a: {
       color: 'darkWhite'
     }, p: {
@@ -25,11 +25,13 @@ class AppFooter extends Component {
     
     return (
       <Section style={this.style.footer}>
-        <p style={this.style.p}>Code Crafted by Song Zhou &copy 2018</p>
+        <p style={this.style.p}>Code Crafted by Zelin Shao &copy 2018</p>
+        <p style={this.style.p}>祝大家新年快乐</p>
         <IconButton
+          onClick = { ()=>{ console.log('click') } }
           iconStyle={{ color: 'white' }}
           iconClassName={'muidocs-icon-custom-github'}
-          href={'https://github.com/RoyTimes'}
+          href={'https://github.com/Croash'}
           linkButton={true}
         />
       </Section>

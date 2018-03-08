@@ -4,7 +4,7 @@ export default (state = { count: 12 , list: [ 1,2,3,4,5 ] }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       list.push(count)
-      return { count: count + 1 , list }
+      return { count: count + 2 , list }
     case 'DECREMENT':
       list.push(count)
       return { count: count - 1 , list }

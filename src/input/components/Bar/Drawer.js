@@ -2,6 +2,7 @@ import React,{ Component } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
+import NaviMenu from './NaviMenu'
 
 export default class DrawerUndockedExample extends Component {
 
@@ -15,21 +16,15 @@ export default class DrawerUndockedExample extends Component {
   handleClose = () => this.setState({ open: false })
 
   render() {
+
+    let { inputEle } = this.props
     return (
       <div>
         <RaisedButton
           label="Open Drawer"
           onClick={this.handleToggle}
         />
-        <Drawer
-          docked={false}
-          width={200}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({ open })}
-        >
-          <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-          <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
-        </Drawer>
+        <NaviMenu open = { this.state.open } />
       </div>
     )
   }

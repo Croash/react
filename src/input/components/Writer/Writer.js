@@ -1,6 +1,8 @@
 import React,{ Component } from 'react'
 import Markdown from 'react-markdown'
 
+const style = { paddingLeft: '15%', paddingRight: '15%' }
+
 const initialSource = `
 # Live demo
 Changes are automatically rendered as you type.
@@ -13,6 +15,7 @@ Changes are automatically rendered as you type.
   This blockquote will change based on the HTML settings above.
 </blockquote>
 ## How about some code?
+
 \`\`\`js
 var React = require('react');
 var Markdown = require('react-markdown');
@@ -21,6 +24,7 @@ React.render(
   document.getElementById('content')
 );
 \`\`\`
+
 Pretty neat, eh?
 ## Tables?
 | Feature | Support |
@@ -38,17 +42,20 @@ class Writer extends Component {
   componentWillMount() {
     this.state = {
       markdownSrc: initialSource,
-      htmlMode: 'skip'
+      htmlMode: 'sg'
     }
   }
   render() {
-    return <Markdown
-    className="result"
-    style={{height:'1000px',width:'1000px'}}
-    source={ this.state.markdownSrc } 
-    skipHtml={ this.state.htmlMode === 'skip' }
-    escapeHtml={ this.state.htmlMode === 'escape' }
-  />
+    return (
+    <div style={style}>
+      <Markdown
+        className="result"
+        style={{ height:'1000px',width:'1000px' }}
+        source={ this.state.markdownSrc } 
+        skipHtml={ this.state.htmlMode === 'skip' }
+        escapeHtml={ this.state.htmlMode === 'escape' }
+      />
+    </div>)
   }
 }
 
