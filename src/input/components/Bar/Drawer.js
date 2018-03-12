@@ -25,13 +25,13 @@ export default class DrawerUndockedExample extends Component {
   render() {
 
     let { inputEle, update, relation, relationUpdate } = this.props
-    console.log(relation.open,this.props)
+    const { open } = relation
     return (
       <div>
         <RaisedButton
           label="Open Drawer"
           onClick={ () => {
-            relationUpdate({ open:true })
+            relationUpdate({ open:!open })
           } }
         />
         <NaviMenu { ...this.props }/>

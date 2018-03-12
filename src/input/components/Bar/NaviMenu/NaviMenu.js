@@ -6,7 +6,8 @@ import SelectLink from './SelectLink'
 import SideBar from './SideBar'
 
 const style = {
-  paddingTop: '5%' 
+  paddingTop: '2%',
+  marginTop:'64px' 
 }
 
 class NavigationMenu extends Component {
@@ -18,11 +19,11 @@ class NavigationMenu extends Component {
     const { open } = relation
     console.log(open)
     return (
-      <Drawer 
+      <Drawer
+        style = {{}}
         open={open}
         docked={true} 
-        containerStyle={style}
-        onRequestChange={ () => { relationUpdate({ open:false }) } }>
+        containerStyle={style}>
         <SideBar/>
         <Divider /> 
         <br />
