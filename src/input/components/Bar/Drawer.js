@@ -11,17 +11,6 @@ export default class DrawerUndockedExample extends Component {
     this.state = { open: false }
   }
 
-  handleToggle = () => { 
-    const { update, list } = this.props
-    console.log(list)
-    this.setState({ open: !this.state.open }) 
-  }
-
-  handleClose = () => { 
-    const { update } = this.props
-    this.setState({ open: false }) 
-  }
-
   render() {
 
     let { inputEle, update, relation, relationUpdate } = this.props
