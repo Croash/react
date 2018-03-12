@@ -11,20 +11,30 @@ export default class DrawerUndockedExample extends Component {
     this.state = { open: false }
   }
 
-  handleToggle = () => this.setState({ open: !this.state.open })
+  handleToggle = () => { 
+    const { update, list } = this.props
+    console.log(list)
+    this.setState({ open: !this.state.open }) 
+  }
 
-  handleClose = () => this.setState({ open: false })
+  handleClose = () => { 
+    const { update } = this.props
+    this.setState({ open: false }) 
+  }
 
   render() {
 
-    let { inputEle } = this.props
+    let { inputEle, update, relation, relationUpdate } = this.props
+    console.log(relation.open,this.props)
     return (
       <div>
         <RaisedButton
           label="Open Drawer"
-          onClick={this.handleToggle}
+          onClick={ () => {
+            relationUpdate({ open:true })
+          } }
         />
-        <NaviMenu open = { this.state.open } />
+        <NaviMenu { ...this.props }/>
       </div>
     )
   }

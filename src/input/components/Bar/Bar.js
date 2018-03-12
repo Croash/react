@@ -11,7 +11,7 @@ class MuiBar extends Component {
       label="Default"     
       title="Zelin_Shao Blog"
       iconElementRight={ <RightBtn/> }
-    iconElementLeft={ <Drawer {...this.props} inputEle = { <NaviMenu/> } /> }
+      iconElementLeft={ <Drawer {...this.props} inputEle = { <NaviMenu/> } /> }
     />)
   }
 }

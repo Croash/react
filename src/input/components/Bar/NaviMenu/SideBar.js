@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-
+import React,{ Component } from 'react'
 import { List, ListItem, makeSelectable } from 'material-ui/List'
 import Subheader from 'material-ui/Subheader'
 import MenuItem from 'material-ui/MenuItem'
@@ -21,9 +20,7 @@ class SideBar extends Component {
   }
 
   handleChange = (event, index) => {
-    console.log(index)
     this.setState({ selectedIndex: index })
-    // this.context.router.push(index)
   }
 
   render() { 
@@ -45,7 +42,6 @@ class SideBar extends Component {
               style={this.style.iconStyles}>sg</FontIcon>
           } />
         {categories.map((item, index) => {
-          console.log(index)
           return (
             <ListItem
               key={index}

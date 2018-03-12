@@ -7,16 +7,18 @@ const { Base, Counter, Combine } = Comp
 
 function mapStateToProps(state) {
   return {
-    value: state.count
+    value: state.count,
+    list: state.list,
+    relation: state.relation
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    update: () => { 
-      return dispatch({ type:'blog@@data_update' }) 
+    dataUpdate: (payload) => {
+      return dispatch({ type:'blog@@data_update', payload:payload })
     },
-    onDecrement: () => dispatch({ type:'DECREMENT' })
+    relationUpdate: (payload) => dispatch({ type:'blog@@relation_update', payload:payload })
   }
 }
 
@@ -28,8 +30,8 @@ const App = connect(
 class outPut extends Component {
   render() {
     return (
-      <Provider store= {store}>
-        <App/>
+      <Provider store = {store}>
+        <App store = {store}/>
       </Provider>
     )
   }

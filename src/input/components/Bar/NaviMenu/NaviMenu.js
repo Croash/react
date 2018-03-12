@@ -14,11 +14,15 @@ class NavigationMenu extends Component {
     super(props)
   }
   render() {
-    const { open = false } = this.props
+    const { onRequestChange = ()=>{}, relationUpdate, relation } = this.props
+    const { open } = relation
+    console.log(open)
     return (
       <Drawer 
         open={open}
-        docked={true} containerStyle={style}>
+        docked={true} 
+        containerStyle={style}
+        onRequestChange={ () => { relationUpdate({ open:false }) } }>
         <SideBar/>
         <Divider /> 
         <br />
