@@ -1,5 +1,4 @@
 import React,{ Component, Children } from 'react'
-import Counter from './Counter'
 
 class Base extends Component {
 

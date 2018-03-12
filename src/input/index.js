@@ -13,8 +13,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onIncrement: () => { 
-      return dispatch({ type:'INCREMENT' }) 
+    update: () => { 
+      return dispatch({ type:'blog@@data_update' }) 
     },
     onDecrement: () => dispatch({ type:'DECREMENT' })
   }
