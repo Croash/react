@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Input from './input'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { Redirect } from 'react-router'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css'
 
 class Test extends Component {
@@ -20,20 +19,20 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <BrowserRouter basename = {'/'}>
+          <Router basename = {'/'}>
             <div>
-              <Route path = {'/input'}
-                component = { Input }
-                forceRefresh = { false }
-              >
-              </Route>
-              <Route path = {'/test'}
-                component = { Test }
-                forceRefresh = { false }
-              >
-              </Route>
+              <Switch>
+                <Route path = {'/main'} component = { Input } forceRefresh = { false } >
+                  <Switch>
+                    <Route exact path = {'/1'} component = { <div>1</div> } forceRefresh = { false } />
+                    <Route exact path = {'/2'} component = { <div>2</div> } forceRefresh = { false } />
+                  </Switch>
+                </Route>
+                <Route path = {'/test'} component = { Test } forceRefresh = { false } ></Route>
+                <Redirect from={'/'} to={'/main'}/>
+              </Switch>
             </div>
-          </BrowserRouter>
+          </Router>
         </div>
       </MuiThemeProvider>
     )

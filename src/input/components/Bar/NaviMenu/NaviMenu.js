@@ -15,7 +15,7 @@ class NavigationMenu extends Component {
     super(props)
   }
   render() {
-    const { onRequestChange = ()=>{}, relationUpdate, relation } = this.props
+    const { relationUpdate, relation } = this.props
     const { open } = relation
     console.log(open)
     return (
