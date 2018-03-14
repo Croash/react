@@ -49,7 +49,8 @@ A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 `
 
 class Writer extends Component {
-  componentWillMount() {
+  constructor(props) {
+    super(props)
     this.state = {
       markdownSrc: initialSource,
       htmlMode: 'sg'

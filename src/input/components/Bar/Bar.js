@@ -7,10 +7,6 @@ import NaviMenu from './NaviMenu'
 
 class MuiBar extends Component {
 
-  // static contextTypes = {
-  //   router: PropTypes.object.isRequired,
-  // }
-
   render() {
     return (
       <AppBar 
