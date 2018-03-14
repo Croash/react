@@ -22,9 +22,10 @@ class App extends Component {
           <Router basename = {'/'}>
             <div>
               <Switch>
-                <Route path = {'/main'} component = { Input } forceRefresh = { false }>
+                <Route path = {'/main'} exact component = { Input } forceRefresh = { false }>
                 </Route>
-                <Route path = {'/test:id'} component = { Input } forceRefresh = { false } ></Route>
+                <Route path = {'/post/:cate'} exact component = { Input } forceRefresh = { false } ></Route>
+                <Route path = {'/post/:cate/:id'} exact component = { Input } forceRefresh = { false } ></Route>
                 <Redirect from={'/'} to={'/main'}/>
               </Switch>
             </div>

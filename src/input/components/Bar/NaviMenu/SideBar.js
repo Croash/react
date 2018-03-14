@@ -38,7 +38,7 @@ class SideBar extends Component {
     
     return (
       <SelectableList style={this.style} 
-        value={this.state.selectedIndex} onChange={this.handleChange}>
+        value={this.state.selectedIndex} >
         <Subheader>Categories</Subheader>
         <ListItem
           primaryText="ALL POSTS"
@@ -61,6 +61,15 @@ class ListClick extends Component {
     router: PropTypes.object.isRequired
   }
 
+  componentDidUpdate() {
+    console.log(this.props)
+  }
+
+  componentDidMount() {
+    console.log('mount')
+    console.log(this.props)
+  }
+
   render() {
   
     const { item, index } = this.props
@@ -68,8 +77,8 @@ class ListClick extends Component {
       <ListItem
         key={index}
           primaryText={item.title}
-        onClick = { () => {  console.log('onclick',this.context.router)
-          this.context.router.history.push(`/${item.title}`) } }
+        onClick = { () => {  console.log(this.context.router.route.match.params)
+          this.context.router.history.push(`/post/${item.title}`) } }
         value={`/posts/item._id/${index}`} leftIcon={
           <FontIcon className="material-icons"
             >{item.logo}</FontIcon>

@@ -17,7 +17,6 @@ class NavigationMenu extends Component {
   render() {
     const { relationUpdate, relation } = this.props
     const { open } = relation
-    console.log(open)
     return (
       <Drawer
         style = {{}}

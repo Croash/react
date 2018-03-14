@@ -8,6 +8,7 @@ import NaviMenu from './NaviMenu'
 class MuiBar extends Component {
 
   render() {
+    console.log(this.props)
     return (
       <AppBar 
         label="Default"     
