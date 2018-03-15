@@ -23,7 +23,7 @@ class NavigationMenu extends Component {
         open={open}
         docked={true} 
         containerStyle={style}>
-        <SideBar/>
+        <SideBar {...this.props}/>
         <Divider /> 
         <br />
         <SelectLink/>

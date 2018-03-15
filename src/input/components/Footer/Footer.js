@@ -10,6 +10,7 @@ class AppFooter extends Component {
       marginTop: '30px', marginLeft: '0%',
       marginRight: '0%', marginBottom: '30px',
       textAlign: 'center',
+      verticalAlign: 'bottom',
       backgroundColor: 'grey'
     }, a: {
       color: 'darkWhite'

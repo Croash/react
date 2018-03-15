@@ -1,20 +1,24 @@
 import React,{ Component, Children } from 'react'
-
+import PropTypes from 'prop-types'
 import Header from './Bar'
 import Footer from './Footer'
 import MBar from './Bar'
-import Writer from './Writer'
+import Content from './Content'
 
 class Combine extends Component {
+  
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props) {
     super(props)
   }
   render() {
-    console.log(this.props)
     return (
-      <Wrap { ...this.props }>
+      <Wrap { ...this.props } >
         <Header/>
-        <Writer/>
+        <Content/>
         <Footer/>
       </Wrap>
     )

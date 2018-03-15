@@ -30,25 +30,19 @@ class SideBar extends Component {
 
   render() { 
     const { categories = [ 
-      { title: 'WORK', logo:'w' }, 
-      { title: 'STUDY', logo: 's' },
-      { title: 'LIFE', logo: 'l' },
-      { title: 'CHICKEN', logo: 'c' }
+      { title: 'All', logo: 'a' },
+      { title: 'Work', logo:'w' }, 
+      { title: 'Study', logo: 's' },
+      { title: 'Life', logo: 'l' },
+      { title: 'Chicken', logo: 'c' }
     ] } = this.props
-    
     return (
       <SelectableList style={this.style} 
         value={this.state.selectedIndex} >
         <Subheader>Categories</Subheader>
-        <ListItem
-          primaryText="ALL POSTS"
-          value="/posts" leftIcon={
-            <FontIcon className="muidocs-icon-action-home"
-              style={this.style.iconStyles}>sg</FontIcon>
-          } />
         {categories.map((item, index) => {
           return (
-            <ListClick item = {item} index = {index}/>)
+            <ListClick {...this.props} item = {item} index = {index} />)
         })}
       </SelectableList>
     )
@@ -57,28 +51,39 @@ class SideBar extends Component {
 
 class ListClick extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      index: 0
+    }
+  }
+
   static contextTypes = {
     router: PropTypes.object.isRequired
   }
 
   componentDidUpdate() {
-    console.log(this.props)
+    // this.setState({
+    //   index:this.state.index++
+    // })
   }
 
   componentDidMount() {
-    console.log('mount')
-    console.log(this.props)
   }
 
   render() {
   
-    const { item, index } = this.props
+    const { item, index, relationUpdate } = this.props
     return(
       <ListItem
         key={index}
           primaryText={item.title}
-        onClick = { () => {  console.log(this.context.router.route.match.params)
-          this.context.router.history.push(`/post/${item.title}`) } }
+        onClick = { () => {  
+          this.context.router.history.push(`/post/${item.title}`)
+          console.log(this.context.router.route.match.params,this.props.relation)
+          relationUpdate({ cate: item.title })
+ 
+        } }
         value={`/posts/item._id/${index}`} leftIcon={
           <FontIcon className="material-icons"
             >{item.logo}</FontIcon>

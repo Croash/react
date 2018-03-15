@@ -1,9 +1,4 @@
-import React,{ Component } from 'react'
-import Markdown from 'react-markdown'
-
-const style = { paddingLeft: '15%', paddingRight: '15%' }
-
-const initialSource = `
+let All = `
 
 # Live demo
 
@@ -48,27 +43,12 @@ A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 
 `
 
-class Writer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      markdownSrc: initialSource,
-      htmlMode: 'sg'
-    }
-  }
-  render() {
-    // console.log(this.props)
-    return (
-    <div style={style}>
-      <Markdown
-        className="result"
-        style={{ height:'1000px',width:'1000px' }}
-        source={ this.state.markdownSrc } 
-        skipHtml={ this.state.htmlMode === 'skip' }
-        escapeHtml={ this.state.htmlMode === 'escape' }
-      />
-    </div>)
-  }
+let demo = {
+  All,
+  Work: '# Work',
+  Study: '# Study',
+  Life: '# Life',
+  Chicken: '# Chicken'
 }
 
-export default Writer
+export default demo
