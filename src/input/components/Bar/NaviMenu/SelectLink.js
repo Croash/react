@@ -15,6 +15,7 @@ class SelectLink extends Component {
       }}>
         <Subheader>Links</Subheader>
         <ListItem primaryText="GitHub" value="https://github.com/Croash" leftIcon={<ActionLabel />} />
+        <ListItem primaryText="Bolg" value="https://croash.github.io" leftIcon={<ActionLabel />} />
       </SelectableList>
     )
   }

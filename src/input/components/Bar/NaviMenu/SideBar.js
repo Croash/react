@@ -24,17 +24,13 @@ class SideBar extends Component {
     })
   }
 
-  handleChange = (event, index) => {
-    this.setState({ selectedIndex: index })
-  }
-
   render() { 
     const { categories = [ 
       { title: 'All', logo: 'a' },
-      { title: 'Work', logo:'w' }, 
-      { title: 'Study', logo: 's' },
+      { title: 'Charts', logo:'c' }, 
+      { title: 'Map', logo: 'm' },
       { title: 'Life', logo: 'l' },
-      { title: 'Chicken', logo: 'c' }
+      { title: 'Algorithm', logo: 'a' }
     ] } = this.props
     return (
       <SelectableList style={this.style} 

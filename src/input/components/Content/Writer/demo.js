@@ -45,10 +45,10 @@ A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 
 let demo = {
   All,
-  Work: '# Work',
-  Study: '# Study',
+  Charts: '# Charts',
+  Map: '# Map',
   Life: '# Life',
-  Chicken: '# Chicken'
+  Algorithm: '# Algorithm'
 }
 
 export default demo

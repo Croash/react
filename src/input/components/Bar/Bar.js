@@ -5,6 +5,8 @@ import RightBtn from './RightBtn'
 import Drawer from './Drawer'
 import NaviMenu from './NaviMenu'
 
+const BarStyle = { position:'fixed', marginTop: '-22px' }
+
 class MuiBar extends Component {
 
   render() {
@@ -13,7 +15,7 @@ class MuiBar extends Component {
         label="Default"     
         title="Zelin_Shao Blog"
         iconElementRight={ <RightBtn/> }
-        style = {{}}
+        style = { {} }
         iconElementLeft={ <Drawer {...this.props} inputEle = { <NaviMenu/> } /> }
       />)
   }
