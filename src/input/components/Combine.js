@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Header from './Header'
 import Footer from './Footer'
 import Content from './Content'
+import SideBar from './SideBar'
 
 class Combine extends Component {
   
@@ -19,6 +20,7 @@ class Combine extends Component {
         <Header/>
         <Content/>
         <Footer/>
+        <SideBar/>
       </Wrap>
     )
   }

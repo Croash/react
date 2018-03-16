@@ -23,7 +23,6 @@ export default class DrawerUndockedExample extends Component {
             relationUpdate({ open:!open })
           } }
         />
-        <SideBar { ...this.props }/>
       </div>
     )
   }
