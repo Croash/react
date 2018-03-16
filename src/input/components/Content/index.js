@@ -13,7 +13,8 @@ const compList = {
 const contentStyle = { 
   paddingLeft: '15%', 
   paddingRight: '15%', 
-  paddingTop: '64px' 
+  paddingTop: '64px',
+  minHeight: '700px'
 }
 
 class Content extends Writer {
