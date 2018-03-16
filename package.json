@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "eslint-config-rackt": "^1.1.1",
+    "konva-szl-charts": "^0.0.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
+    "react-amap": "^1.2.3",
+    "react-amapui-wrapper": "^0.0.10",
     "react-dom": "^16.2.0",
     "react-markdown": "^3.3.0",
     "react-redux": "^5.0.7",

@@ -1893,6 +1893,14 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+create-react-class@^15.6.0:
+  version "15.6.3"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 cross-spawn@5.1.0, cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "http://registry.npm.taobao.org/cross-spawn/download/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -2961,7 +2969,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.16:
+fbjs@^0.8.1, fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.9:
   version "0.8.16"
   resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -3249,6 +3257,10 @@ getpass@^0.1.1:
   resolved "http://registry.npm.taobao.org/getpass/download/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+gl-matrix@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-2.4.0.tgz#2089b13301a29eec822d9d99dffc1f78ee9a3c50"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -4503,6 +4515,18 @@ klaw@^1.0.0:
   resolved "http://registry.npm.taobao.org/klaw/download/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
   optionalDependencies:
     graceful-fs "^4.1.9"
+
+konva-szl-charts@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/konva-szl-charts/-/konva-szl-charts-0.0.2.tgz#87ea346801b94c270c9a4ae6d2f919e8916a6737"
+  dependencies:
+    gl-matrix "^2.4.0"
+    konva "^1.7.6"
+    react-konva "~1.1.6"
+
+konva@^1.7.6:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-1.7.6.tgz#7aceef1058b04127077c8f44653556b35b1133e6"
 
 latest-version@^3.0.0:
   version "3.1.0"
@@ -5945,6 +5969,14 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-amap@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/react-amap/-/react-amap-1.2.3.tgz#2c64a0b11f2ce3dce4fa86b73b3b79b754442200"
+
+react-amapui-wrapper@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-amapui-wrapper/-/react-amapui-wrapper-0.0.10.tgz#143fb44ba215d7df4f584450cff8542c7c0794fa"
+
 react-dev-utils@^5.0.0:
   version "5.0.0"
   resolved "http://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-5.0.0.tgz#425ac7c9c40c2603bc4f7ab8836c1406e96bb473"
@@ -5989,6 +6021,15 @@ react-event-listener@^0.5.1:
     fbjs "^0.8.16"
     prop-types "^15.6.0"
     warning "^3.0.0"
+
+react-konva@~1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-1.1.6.tgz#d721a0e85d37ff01a6a088ff64a10d181816206d"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.14"
+    object-assign "^4.1.1"
+    prop-types "^15.5.10"
 
 react-markdown@^3.3.0:
   version "3.3.0"

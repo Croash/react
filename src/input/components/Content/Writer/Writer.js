@@ -16,7 +16,6 @@ class Writer extends Component {
     // console.log(this.props)
     const { relation:{ cate = 'All' } } = this.props
     return (
-    <div style={style}>
       <Markdown
         className="result"
         style={{ height:'1000px',width:'1000px' }}
@@ -24,7 +23,7 @@ class Writer extends Component {
         skipHtml={ this.state.htmlMode === 'skip' }
         escapeHtml={ this.state.htmlMode === 'escape' }
       />
-    </div>)
+    )
   }
 }
 

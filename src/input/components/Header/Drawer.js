@@ -2,7 +2,6 @@ import React,{ Component } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
-import SideBar from './SideBar'
 
 export default class DrawerUndockedExample extends Component {
 
