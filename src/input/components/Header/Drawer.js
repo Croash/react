@@ -2,7 +2,7 @@ import React,{ Component } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
-import NaviMenu from './NaviMenu'
+import SideBar from './SideBar'
 
 export default class DrawerUndockedExample extends Component {
 
@@ -23,7 +23,7 @@ export default class DrawerUndockedExample extends Component {
             relationUpdate({ open:!open })
           } }
         />
-        <NaviMenu { ...this.props }/>
+        <SideBar { ...this.props }/>
       </div>
     )
   }

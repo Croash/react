@@ -2,7 +2,7 @@ import React,{ Component } from 'react'
 import Markdown from 'react-markdown'
 import demo from './demo'
 
-const style = { paddingLeft: '15%', paddingRight: '15%' }
+const style = { paddingLeft: '15%', paddingRight: '15%', paddingTop: '64px' }
 
 class Writer extends Component {
   constructor(props) {

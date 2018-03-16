@@ -1,8 +1,7 @@
 import React,{ Component, Children } from 'react'
 import PropTypes from 'prop-types'
-import Header from './Bar'
+import Header from './Header'
 import Footer from './Footer'
-import MBar from './Bar'
 import Content from './Content'
 
 class Combine extends Component {

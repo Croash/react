@@ -20,15 +20,13 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <Router basename = {'/'}>
-            <div>
-              <Switch>
-                <Route path = {'/main'} exact component = { Input } forceRefresh = { false }>
-                </Route>
-                <Route path = {'/post/:cate'} exact component = { Input } forceRefresh = { false } ></Route>
-                <Route path = {'/post/:cate/:id'} exact component = { Input } forceRefresh = { false } ></Route>
-                <Redirect from={'/'} to={'/main'}/>
-              </Switch>
-            </div>
+            <Switch>
+              <Route path = {'/main'} exact component = { Input } forceRefresh = { false }>
+              </Route>
+              <Route path = {'/post/:cate'} exact component = { Input } forceRefresh = { false } ></Route>
+              <Route path = {'/post/:cate/:id'} exact component = { Input } forceRefresh = { false } ></Route>
+              <Redirect from={'/'} to={'/main'}/>
+            </Switch>
           </Router>
         </div>
       </MuiThemeProvider>

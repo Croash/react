@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import AppBar from 'material-ui/AppBar'
 import RightBtn from './RightBtn'
 import Drawer from './Drawer'
-import NaviMenu from './NaviMenu'
 
-const BarStyle = { position:'fixed', marginTop: '-22px' }
+const headerStyle = { position:'fixed', top: '0' }
 
 class MuiBar extends Component {
 
@@ -15,8 +14,8 @@ class MuiBar extends Component {
         label="Default"     
         title="Zelin_Shao Blog"
         iconElementRight={ <RightBtn/> }
-        style = { {} }
-        iconElementLeft={ <Drawer {...this.props} inputEle = { <NaviMenu/> } /> }
+        style = {headerStyle}
+        iconElementLeft={ <Drawer {...this.props} /> }
       />)
   }
 }
