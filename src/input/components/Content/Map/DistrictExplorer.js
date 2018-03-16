@@ -8,7 +8,6 @@ class DeComp extends DistrictExplorer {
   }
 
   componentWillUnmount() {
-    this[this.instanceName].clearFeaturePolygons()
     this[this.instanceName].clearAreaNodeCache()
     console.log(this.instanceName + ' Unmount')
     delete this[this.instanceName]
