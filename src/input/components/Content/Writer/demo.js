@@ -1,6 +1,6 @@
 let All = `
 
-# Live demo
+# demo markdown
 
 Changes are automatically rendered as you type.
 * Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
@@ -43,12 +43,29 @@ A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
 
 `
 
+const Charts = `
+# Charts
+  好像打包有点问题，等下回去重新建一下项目。
+`
+
+const Life = `
+# Life
+  愿之后work life balance吧
+  ps: 为什么会想到life是只鸡呢，看星际老男孩太多了，对智商果然不好
+`
+
+const Algorithm = `
+# Algorithm
+  算法什么的，有什么问题嘛，反正也不会（逃
+  之后有心情补上好了
+`
+
 let demo = {
   All,
-  Charts: '# Charts',
+  Charts,
   Map: '# Map',
-  Life: '# Life',
-  Algorithm: '# Algorithm'
+  Life,
+  Algorithm
 }
 
 export default demo

@@ -8,7 +8,7 @@ class AppFooter extends Component {
   style = {
     footer: {
       marginTop: '30px', marginLeft: '0%',
-      marginRight: '0%', marginBottom: '30px',
+      marginRight: '0%', marginBottom: '0px',
       textAlign: 'center',
       verticalAlign: 'bottom',
       backgroundColor: 'grey'
