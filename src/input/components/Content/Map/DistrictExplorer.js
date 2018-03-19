@@ -7,11 +7,6 @@ class DeComp extends DistrictExplorer {
     this.instanceName = 'districtExplorer'
   }
 
-  componentWillUnmount() {
-    this[this.instanceName].clearAreaNodeCache()
-    console.log(this.instanceName + ' Unmount')
-    delete this[this.instanceName]
-  }
 
   // render AllPage
   initPage() {
@@ -62,21 +57,6 @@ class DeComp extends DistrictExplorer {
   
     //更新地图视野以适合区划面
     this.map.setFitView(this[this.instanceName].getAllFeaturePolygons())
-  }
-
-  loadAreaNode(adcode, callback) {
-    this[this.instanceName].loadAreaNode(adcode, (error, areaNode) => {
-      if (error) {
-        if (callback) {
-          callback(error)
-        }
-        console.error(error)
-        return
-      }
-      if (callback) {
-        callback(null, areaNode)
-      }
-    })
   }
 
 }

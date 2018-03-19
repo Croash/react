@@ -3,6 +3,8 @@ import { Map } from 'react-amap'
 import { Wrapper as Wrap/* , DistrictExplorer */ } from 'react-amapui-wrapper'
 import DistrictExplorer from './DistrictExplorer'
 
+window.amapkey = '9c25aa5d8e6f9a6cf1bbfc6655aca2fd'
+
 class MapUIComponent extends Component {
 
   componentWillUnmount() {
@@ -74,7 +76,9 @@ class MapUIComponent extends Component {
   render() {
     return (
       <div style={{ width:'600px', height:'400px', paddingTop:'30px' }}>
-        <Map useAMapUI={true} events = {{ created:(ins) => { this.map = ins } }}>
+        <Map useAMapUI={true} 
+          events = {{ created:(ins) => { this.map = ins } }}
+          >
           <Wrap>
             <DistrictExplorer
               events = {this.districtEvents}

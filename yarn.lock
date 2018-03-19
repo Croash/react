@@ -5973,9 +5973,9 @@ react-amap@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/react-amap/-/react-amap-1.2.3.tgz#2c64a0b11f2ce3dce4fa86b73b3b79b754442200"
 
-react-amapui-wrapper@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/react-amapui-wrapper/-/react-amapui-wrapper-0.0.10.tgz#143fb44ba215d7df4f584450cff8542c7c0794fa"
+react-amapui-wrapper@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/react-amapui-wrapper/-/react-amapui-wrapper-0.0.11.tgz#b8ec49530b23ae6084944c6cccd61536abb7e41d"
 
 react-dev-utils@^5.0.0:
   version "5.0.0"
