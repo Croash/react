@@ -25,7 +25,6 @@ class Content extends Writer {
   render() {
     const { route:{ match } } = this.context.router
     const { params:{ cate } } = match
-    // let list = 
     console.log(cate)
     let ShowContent = compList[cate]!=undefined ? compList[cate]:compList['Writer']
     return ( 
