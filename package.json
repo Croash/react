@@ -2,25 +2,28 @@
   "name": "redux-saga-test",
   "version": "0.1.0",
   "private": true,
+  "main": "src/index.js",
   "dependencies": {
     "eslint-config-rackt": "^1.1.1",
+    "json-loader": "^0.5.7",
     "konva-szl-charts": "^0.0.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-amap": "^1.2.3",
-    "react-amapui-wrapper": "0.0.11",
+    "react-amapui-wrapper": "^0.0.16",
     "react-dom": "^16.2.0",
     "react-markdown": "^3.3.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "svg.js": "^2.6.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-eslint": "^6.1.2",
-    "babel-loader": "6.2.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-istanbul": "^2.0.1",
     "babel-plugin-transform-imports": "^1.4.1",
@@ -33,6 +36,7 @@
     "babel-register": "~6.14.0",
     "connect-history-api-fallback": "^1.1.0",
     "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.11",
     "eslint": "^2.0.0",
     "eslint-config-rackt": "^1.1.1",
     "eslint-friendly-formatter": "^1.2.2",
@@ -45,7 +49,8 @@
     "prop-types": "^15.6.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "style-loader": "^0.20.3"
   },
   "scripts": {
     "start": "react-scripts start",
