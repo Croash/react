@@ -14,32 +14,6 @@ class Test extends Component {
   }
 }
 
-// let loadFinished= ()=>{
-//   let app = document.getElementsByClassName('App')[0]
-//   let body = document.getElementsByTagName('body')[0]
-
-//   let winWidth = window.innerWidth
-//   let appWidth = app.clientWidth
-//   let widthScale = winWidth/appWidth
-
-//   let winHeight = window.innerHeight
-//   let appHeight = app.clientHeight
-//   let heightScale = winHeight/appHeight
-
-  
-//   let resScale = widthScale>heightScale?heightScale:widthScale
-//   console.log(winWidth,appWidth,resScale,body)
-//   app.style['transform']=`scale(${resScale})`
-//   app.style['transform-origin']='top'
-
-//   body.style['width']=appWidth*resScale
-//   body.style['height']=appHeight *resScale
-
-//   // app.style['top']=0
-// }
-
-// window.onload = loadFinished
-
 class App extends Component {
   render() {
     return (

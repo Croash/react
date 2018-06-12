@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import Markdown from 'react-markdown'
-import demo from './demo'
-import Auth from '../Auth'
+import MDsrc from './demo'
+import Auth from './Auth'
 
 const style = { height:'1000px',width:'1000px' }
 class MapDes extends Component {
@@ -15,11 +15,11 @@ class MapDes extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ width:'100%', height:'100%' }}>
         <Markdown
           className="result"
           style={{ height:'1000px',width:'1000px' }}
-          source={ demo } 
+          source={ MDsrc } 
           skipHtml={ this.state.htmlMode === 'skip' }
           escapeHtml={ this.state.htmlMode === 'escape' }
         />

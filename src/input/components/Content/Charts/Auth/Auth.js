@@ -15,23 +15,12 @@ const styles = theme => ({
 })
 
 const InputWithIcon = (props = { classes:{ margin: { margin:'8px' } } }) => {
-  const classes = props
-  return (<div>
-    <FormControl className={classes.margin}>
-      <InputLabel htmlFor="input-with-icon-adornment">With a start adornment</InputLabel>
-      <Input
-        id="input-with-icon-adornment"
-        startAdornment={
-          <InputAdornment position="start">
-            <AccountCircle />
-          </InputAdornment>
-        }
-      />
-    </FormControl>
+  const classes = { margin: { margin:'8px' } }
+  return (<div style={{ textAlign:'center', verticalAlign: 'center' }}>
     <TextField
-      className={classes.margin}
+      style={classes.margin}
       id="input-with-icon-textfield"
-      label="TextField"
+      label="UserName"
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
@@ -40,16 +29,18 @@ const InputWithIcon = (props = { classes:{ margin: { margin:'8px' } } }) => {
         )
       }}
     />
-    <div className={classes.margin}>
-      <Grid container spacing={8} alignItems="flex-end">
-        <Grid item>
-          <AccountCircle />
-        </Grid>
-        <Grid item>
-          <TextField id="input-with-icon-grid" label="With a grid" />
-        </Grid>
-      </Grid>
-    </div>
+    <TextField
+      style={classes.margin}
+      id="input-with-icon-textfield"
+      label="PassWord"
+      InputProps={{
+        startAdornment: (
+          <InputAdornment position="start">
+            <AccountCircle />
+          </InputAdornment>
+        )
+      }}
+    />
   </div>)
 }
 
