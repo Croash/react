@@ -2,11 +2,12 @@ import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
 import Writer from './Writer'
 import Map from './Map'
-// import Charts from './Charts'
+import Charts from './Charts'
 
 const compList = {
   Writer,
-  Map
+  Map,
+  Charts
 }
 
 const contentStyle = { 

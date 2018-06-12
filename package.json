@@ -4,6 +4,8 @@
   "private": true,
   "main": "src/index.js",
   "dependencies": {
+    "@material-ui/core": "^1.2.1",
+    "@material-ui/icons": "^1.1.0",
     "eslint-config-rackt": "^1.1.1",
     "json-loader": "^0.5.7",
     "konva-szl-charts": "^0.0.2",
