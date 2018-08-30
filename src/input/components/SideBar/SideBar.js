@@ -76,7 +76,7 @@ class ListClick extends Component {
           primaryText={item.title}
         onClick = { () => {  
           this.context.router.history.push(`/post/${item.title}`)
-          console.log(this.context.router.route.match.params,this.props.relation)
+          // console.log(this.context.router.route.match.params,this.props.relation)
           relationUpdate({ cate: item.title })
  
         } }

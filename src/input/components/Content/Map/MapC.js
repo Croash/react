@@ -13,7 +13,6 @@ const wrapperStyle = {
 
 class MapC extends Map {
   render() {
-    console.log(this.state)
     return (<div style={wrapperStyle}>
       <div ref={(div)=>{ this.mapWrapper = div }} style={containerStyle}>
       {

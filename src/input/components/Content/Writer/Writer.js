@@ -13,7 +13,6 @@ class Writer extends Component {
     }
   }
   render() {
-    // console.log(this.props)
     const { relation:{ cate = 'All' } } = this.props
     return (
       <Markdown

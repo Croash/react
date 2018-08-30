@@ -11,6 +11,7 @@ const compList = {
 }
 
 const contentStyle = { 
+  border: '2px red',
   paddingLeft: '15%', 
   paddingRight: '15%', 
   paddingTop: '64px',
@@ -28,6 +29,7 @@ class Content extends Writer {
     const { params:{ cate } } = match
     console.log(cate)
     let ShowContent = compList[cate]!=undefined ? compList[cate]:compList['Writer']
+    console.log(ShowContent)
     return ( 
       <div style={contentStyle}>
         <ShowContent { ...this.props } />

@@ -3,7 +3,7 @@ import Markdown from 'react-markdown'
 import demo from './demo'
 
 const style = { height:'1000px',width:'1000px' }
-class MapDes extends Component {
+class Description extends Component {
 
   constructor(props) {
     super(props)
@@ -26,4 +26,4 @@ class MapDes extends Component {
 
 }
 
-export default MapDes
+export default Description

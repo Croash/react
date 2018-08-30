@@ -8,9 +8,7 @@ window.amapkey = '9c25aa5d8e6f9a6cf1bbfc6655aca2fd'
 class MapUIComponent extends Component {
 
   componentWillUnmount() {
-    console.log('unmountmount')
     // this.map.destroy()
-    console.log(this.map)
   }
 
   renderAreaNode(districtExplorer, areaNode, parentColors, childColors) {
@@ -68,7 +66,6 @@ class MapUIComponent extends Component {
     featureMousemove: (e,feature)=>{
     },
     outsideClick: (e,feature)=>{
-      console.log('outSide Clicking')
     }
     ,closed: ()=>{ console.log('close') }
   }

@@ -3,7 +3,6 @@ import { call, put } from 'redux-saga/effects'
 
 // worker saga
 function* showPostsAsync(action) {
-  console.log(action.payload)
   yield put({ type:'blog@@relation_updated',payload:{ sg:'sg' }, key:'stop' })
 }
 
