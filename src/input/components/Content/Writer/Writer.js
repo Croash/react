@@ -1,10 +1,16 @@
 import React,{ Component } from 'react'
+import PropTypes from 'prop-types'
 import Markdown from 'react-markdown'
 import demo from './demo'
 
 const style = { paddingLeft: '15%', paddingRight: '15%', paddingTop: '64px' }
 
 class Writer extends Component {
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -13,7 +19,8 @@ class Writer extends Component {
     }
   }
   render() {
-    const { relation:{ cate = 'All' } } = this.props
+    const { route:{ match } } = this.context.router
+    const { params:{ cate } } = match
     return (
       <Markdown
         className="result"

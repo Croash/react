@@ -29,7 +29,7 @@ class Content extends Writer {
     const { params:{ cate } } = match
     console.log(cate)
     let ShowContent = compList[cate]!=undefined ? compList[cate]:compList['Writer']
-    console.log(ShowContent)
+    console.log(cate,compList,ShowContent)
     return ( 
       <div style={contentStyle}>
         <ShowContent { ...this.props } />
