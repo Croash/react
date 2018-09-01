@@ -1,4 +1,5 @@
 import React,{ Component } from 'react'
+import { PropTypes } from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
@@ -15,36 +16,60 @@ const styles = theme => ({
   }
 })
 
-const InputWithIcon = (props = { classes:{ margin: { margin:'8px' } } }) => {
-  const classes = { margin: { margin:'8px' } }
-  return (<div style={{ textAlign:'center', verticalAlign: 'middle' }}>
-    <TextField
-      style={classes.margin}
-      id="input-with-icon-textfield"
-      label="UserName"
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <AccountCircle />
-          </InputAdornment>
-        )
-      }}
-    />
-    <TextField
-      style={classes.margin}
-      id="input-with-icon-textfield"
-      label="PassWord"
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <AccountCircle />
-          </InputAdornment>
+class InputWithIcon extends Component {
 
-        )
-      }}
-    />
-    <Button>Log In</Button>
-  </div>)
+  state = {
+    usr: '',
+    pwd: ''
+  }
+
+  render() {
+    const classes = { margin: { margin:'8px' } }
+    const { normalUpdate } = this.props
+    return (<div style={{ textAlign:'center', verticalAlign: 'middle' }}>
+      <TextField
+        style={classes.margin}
+        id="input-with-icon-textfield"
+        label="UserName"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <AccountCircle />
+            </InputAdornment>
+          )
+        }}
+        onChange={
+          (e)=>{ 
+            this.setState({ usr: e.target.value }) 
+          }
+        }
+      />
+      <TextField
+        style={classes.margin}
+        id="input-with-icon-textfield"
+        label="PassWord"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <AccountCircle />
+            </InputAdornment>
+  
+          )
+        }}
+        onChange={
+          (e)=>{ 
+            this.setState({ pwd: e.target.value }) 
+          }
+        }
+      />
+      <div>
+        <Button style={{ marginTop:'18px' }} 
+          onClick={()=>{
+            normalUpdate({ _login_: true, usr: this.state.usr, pwd: this.state.pwd })
+          }}>Sign In</Button>
+      </div>
+    </div>)
+  }
 }
 
 export default withStyles(styles)(InputWithIcon)

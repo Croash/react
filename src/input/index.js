@@ -9,16 +9,18 @@ function mapStateToProps(state) {
   return {
     value: state.count,
     list: state.list,
-    relation: state.relation
+    relation: state.relation,
+    login: state._login_
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     dataUpdate: (payload) => {
-      return dispatch({ type:'blog@@data_update', payload:payload })
+      return dispatch({ type:'blog@@data_update', payload })
     },
-    relationUpdate: (payload) => dispatch({ type:'blog@@relation_update', payload:payload })
+    relationUpdate: (payload) => dispatch({ type:'blog@@relation_update', payload }),
+    normalUpdate: (payload) => dispatch({ type: 'blog@@normal_update', payload })
   }
 }
 

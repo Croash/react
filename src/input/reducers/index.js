@@ -8,6 +8,8 @@ export default (state = initState, action) => {
       return { ...state, data: { ...state.data, ...payload }  }
     case 'blog@@relation_update':
       return { ...state, relation: { ...state.relation, ...payload }  }
+    case 'blog@@normal_update':
+      return { ...state, ...payload }
     default:
       return state
   }

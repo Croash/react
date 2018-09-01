@@ -20,10 +20,10 @@ export default class authWrap extends Component {
   render() {
     const { route:{ match } } = this.context.router
     const { params:{ cate } } = match
-    console.log('lalaladadada')
+    console.log(this.props)
     return ( 
       <div style={contentStyle}>
-        <Auth/>
+        <Auth  {...this.props}/>
       </div>
     )
   }

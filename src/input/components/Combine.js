@@ -18,11 +18,11 @@ class Combine extends Component {
     super(props)
   }
   render() {
-    const { _login_ } = this.context.store.getState()
+    const { login } = this.props
     return (
       <Wrap { ...this.props } >
         <Header/>
-        { _login_? <Content/>: <Auth/>}
+        { login? <Content/>: <Auth/>}
         <Footer/>
         <SideBar/>
       </Wrap>
