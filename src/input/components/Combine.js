@@ -5,6 +5,8 @@ import Footer from './Footer'
 import Content from './Content'
 import SideBar from './SideBar'
 
+import Auth from './Auth'
+
 class Combine extends Component {
   
   static contextTypes = {
@@ -18,6 +20,7 @@ class Combine extends Component {
     return (
       <Wrap { ...this.props } >
         <Header/>
+        <Auth/>
         <Content/>
         <Footer/>
         <SideBar/>

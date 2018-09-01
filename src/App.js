@@ -24,7 +24,7 @@ class App extends Component {
               <Route path = {'/main'} exact component = { Input } forceRefresh = { false }></Route>
               <Route path = {'/post/:cate'} exact component = { Input } forceRefresh = { false } ></Route>
               <Route path = {'/post/:cate/:id'} exact component = { Input } forceRefresh = { false } ></Route>
-              <WrapRoute wrapPath={'/:motherfucker'} activeOnlyWhenExact={false} label={'wrapPath'} />
+              {/* <WrapRoute wrapPath={'/:motherfucker'} activeOnlyWhenExact={false} label={'wrapPath'} /> */}
               <Redirect from={'/'} to="/main"/>
             </Switch>
           </Router>
@@ -36,7 +36,6 @@ class App extends Component {
 
 const wrapRoute = (props) => {
   const { label, wrapPath, activeOnlyWhenExact } = props
-  console.log(props)
   return (<Route
     path={wrapPath}
     exact={activeOnlyWhenExact}

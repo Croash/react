@@ -21,6 +21,7 @@ class Writer extends Component {
   render() {
     const { route:{ match } } = this.context.router
     const { params:{ cate } } = match
+    // main 中 demo[cate] 为undefined
     return (
       <Markdown
         className="result"

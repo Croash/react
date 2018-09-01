@@ -1,4 +1,5 @@
 import Base from './Wrap'
 import Combine from './Combine'
+import Auth from './Auth'
 
-export default { Base,  Combine }
+export default { Auth, Base,  Combine }
