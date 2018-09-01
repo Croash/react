@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Writer from './Writer'
 import Map from './Map'
 import Charts from './Charts'
+import Auth from '../Auth'
 
 const compList = {
   Writer,

@@ -10,6 +10,7 @@ import Auth from './Auth'
 class Combine extends Component {
   
   static contextTypes = {
+    store: PropTypes.object,
     router: PropTypes.object.isRequired
   }
 
@@ -17,11 +18,11 @@ class Combine extends Component {
     super(props)
   }
   render() {
+    const { _login_ } = this.context.store.getState()
     return (
       <Wrap { ...this.props } >
         <Header/>
-        <Auth/>
-        <Content/>
+        { _login_? <Content/>: <Auth/>}
         <Footer/>
         <SideBar/>
       </Wrap>

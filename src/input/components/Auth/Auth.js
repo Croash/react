@@ -7,6 +7,7 @@ import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import AccountCircle from '@material-ui/icons/AccountCircle'
+import Button from '@material-ui/core/Button'
 
 const styles = theme => ({
   margin: {
@@ -38,9 +39,11 @@ const InputWithIcon = (props = { classes:{ margin: { margin:'8px' } } }) => {
           <InputAdornment position="start">
             <AccountCircle />
           </InputAdornment>
+
         )
       }}
     />
+    <Button>Log In</Button>
   </div>)
 }
 

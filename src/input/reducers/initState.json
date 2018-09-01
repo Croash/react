@@ -1,0 +1,8 @@
+{
+  "list": [ 1,2,3,4,5 ],
+  "count": 123, 
+  "relation":{ 
+    "open":false 
+  },
+  "_login_": false
+}

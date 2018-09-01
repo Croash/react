@@ -1,4 +1,7 @@
-export default (state = {  list: [ 1,2,3,4,5 ], count: 123, relation:{ open:false } }, action) => {
+import initState from './initState.json'
+
+
+export default (state = initState, action) => {
   const payload = action.payload
   switch (action.type) {
     case 'blog@@data_update':
