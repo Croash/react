@@ -2,7 +2,7 @@ import React,{ Component } from 'react'
 import Markdown from 'react-markdown'
 import MDsrc from './demo'
 
-const style = { height:'1000px',width:'1000px' }
+const style = { height:'100%',width:'100%' }
 class MapDes extends Component {
 
   constructor(props) {

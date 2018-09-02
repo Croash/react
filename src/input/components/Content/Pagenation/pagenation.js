@@ -5,7 +5,8 @@ import 'rc-pagination/assets/index.css'
 
 class Pagenation extends Component {
   state = {
-    current: 3
+    current: 12,
+    pageSize: 5
   };
   onChange = (page) => {
     console.log(page)
@@ -14,7 +15,12 @@ class Pagenation extends Component {
     })
   }
   render() {
-    return <Pagination onChange={this.onChange} current={this.state.current} total={25} />
+    return (<Pagination 
+      onChange={this.onChange} 
+      current={this.state.current}
+      pageSize={this.state.pageSize}
+      hideOnSinglePage={true}
+      total={25} />)
   }
 }
 
