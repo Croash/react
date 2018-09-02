@@ -38,3 +38,12 @@ html {
   min-height: 100%;
   position: relative;
 }
+
+.content {
+  border: 2px red;
+  padding-left: 15%; 
+  padding-right: 15%; 
+  padding-top: 64px;
+  min-height: 700px;
+  padding-bottom: 300px;
+}

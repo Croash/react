@@ -5,6 +5,9 @@ import Map from './Map'
 import Charts from './Charts'
 import Pagenation from './Pagenation'
 
+import Widgets from '../Widgets'
+const { Paper } = Widgets
+
 const compList = {
   Writer,
   Map,
@@ -23,18 +26,18 @@ const contentStyle = {
 class Content extends Writer {
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
+    store: PropTypes.object.isRequired
   }
 
   render() {
-    const { route:{ match } } = this.context.router
-    const { params:{ cate } } = match
+    const { route:{ match:{ params:{ cate } } } } = this.context.router
+    const { page=0, content = [] }  = this.context.store.getState().pagination
 
     let ShowContent = compList[cate]!=undefined ? compList[cate]:compList['Writer']
     return ( 
-      <div style={contentStyle}>
+      <div className={'content'}>
         <ShowContent { ...this.props } />
-        <Pagenation/>
       </div>
     )
   }

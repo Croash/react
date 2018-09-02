@@ -65,7 +65,6 @@ const Algorithm = `
 let demo = {
   All,
   Charts,
-  Map: '# Map',
   Life,
   Algorithm
 }

@@ -4,5 +4,30 @@
   "relation":{ 
     "open":false 
   },
-  "_login_": false
+  "_login_": false,
+  "pagination": {
+    "page":0,
+    "content": [
+      {
+        "title":"title1",
+        "description":"some description"
+      },
+      {
+        "title":"title2",
+        "description":"some description"
+      },
+      {
+        "title":"title3",
+        "description":"some description"
+      },
+      {
+        "title":"title4",
+        "description":"some description"
+      },
+      {
+        "title":"title5",
+        "description":"some description"
+      }
+    ]
+  }
 }

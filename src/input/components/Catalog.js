@@ -2,7 +2,7 @@ import React,{ Component, Children } from 'react'
 import PropTypes from 'prop-types'
 import Header from './Header'
 import Footer from './Footer'
-import Content from './Content'
+import Catalog from './cataBase'
 import SideBar from './SideBar'
 import Wrap from './Wrap'
 
@@ -23,7 +23,7 @@ class Combine extends Component {
     return (
       <Wrap { ...this.props } >
         <Header/>
-        { login? <Content/>: <Auth/>}
+        <Catalog/>
         <Footer/>
         <SideBar/>
       </Wrap>

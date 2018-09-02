@@ -4,6 +4,7 @@ import Divider from 'material-ui/Divider'
 
 import SelectLink from './SelectLink'
 import SideBar from './SideBar'
+import InsetDividers from './InsetDividers'
 
 const style = {
   paddingTop: '2%',
@@ -24,9 +25,12 @@ class NavigationMenu extends Component {
         docked={true} 
         containerStyle={style}>
         <SideBar {...this.props}/>
-        <Divider /> 
+        <Divider/> 
         <br />
         <SelectLink/>
+        <Divider/> 
+        <br />
+        <InsetDividers/>
       </Drawer>
     )
   }

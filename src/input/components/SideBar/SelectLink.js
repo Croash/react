@@ -13,7 +13,7 @@ class SelectLink extends Component {
       <SelectableList onChange={(evt, value) => {
         window.open(value)
       }}>
-        <Subheader>Links</Subheader>
+      <Subheader>Links</Subheader>
         <ListItem primaryText="GitHub" value="https://github.com/Croash" leftIcon={<ActionLabel />} />
         <ListItem primaryText="Blog" value="https://croash.github.io" leftIcon={<ActionLabel />} />
       </SelectableList>
