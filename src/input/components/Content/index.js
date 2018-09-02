@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Writer from './Writer'
 import Map from './Map'
 import Charts from './Charts'
-import Auth from '../Auth'
+import Pagenation from './Pagenation'
 
 const compList = {
   Writer,
@@ -16,7 +16,8 @@ const contentStyle = {
   paddingLeft: '15%', 
   paddingRight: '15%', 
   paddingTop: '64px',
-  minHeight: '700px'
+  minHeight: '700px',
+  paddingBottom: '300px'
 }
 
 class Content extends Writer {
@@ -33,6 +34,7 @@ class Content extends Writer {
     return ( 
       <div style={contentStyle}>
         <ShowContent { ...this.props } />
+        <Pagenation/>
       </div>
     )
   }

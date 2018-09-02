@@ -33,3 +33,8 @@
   /*设置文本垂直居中*/
   vertical-align:middle;     
 } 
+
+html {
+  min-height: 100%;
+  position: relative;
+}

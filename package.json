@@ -10,6 +10,7 @@
     "json-loader": "^0.5.7",
     "konva-szl-charts": "^0.0.2",
     "material-ui": "^0.20.0",
+    "rc-pagination": "^1.17.0",
     "react": "^16.2.0",
     "react-amap": "^1.2.3",
     "react-amapui-wrapper": "^0.0.16",
