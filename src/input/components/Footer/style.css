@@ -1,0 +1,11 @@
+.footer {
+  padding: 72px 24px;
+  box-sizing: border-box;
+  margin: 30px 0% 0px;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: grey;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

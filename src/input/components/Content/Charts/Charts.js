@@ -1,7 +1,6 @@
 import React,{ Component } from 'react'
 import Markdown from 'react-markdown'
 import MDsrc from './demo'
-import Auth from './Auth'
 
 const style = { height:'1000px',width:'1000px' }
 class MapDes extends Component {
@@ -23,7 +22,6 @@ class MapDes extends Component {
           skipHtml={ this.state.htmlMode === 'skip' }
           escapeHtml={ this.state.htmlMode === 'escape' }
         />
-        <Auth/>
       </div>
     )
   }

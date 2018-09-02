@@ -10,6 +10,8 @@ import Grid from '@material-ui/core/Grid'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import Button from '@material-ui/core/Button'
 
+import './style.css'
+
 const styles = theme => ({
   margin: {
     margin: theme.spacing.unit
@@ -26,7 +28,7 @@ class InputWithIcon extends Component {
   render() {
     const classes = { margin: { margin:'8px' } }
     const { normalUpdate } = this.props
-    return (<div style={{ textAlign:'center', verticalAlign: 'middle' }}>
+    return (<div className="child">
       <TextField
         style={classes.margin}
         id="input-with-icon-textfield"

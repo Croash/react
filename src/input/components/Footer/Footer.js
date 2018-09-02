@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 import Section from './section'
 import IconButton from 'material-ui/IconButton'
+import './style.css'
 // import * as Colors from './colors'
 
 class AppFooter extends Component {
@@ -25,7 +26,7 @@ class AppFooter extends Component {
   render() {
     
     return (
-      <Section style={this.style.footer}>
+      <Section className="footer">
         <p style={this.style.p}>Code Crafted by Zelin Shao &copy 2018</p>
         <p style={this.style.p}>祝大家新年快乐</p>
         <IconButton
