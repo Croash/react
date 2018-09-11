@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Writer from './Writer'
 import Map from './Map'
 import Charts from './Charts'
-import Pagenation from './Pagenation'
 
 import Widgets from '../Widgets'
 const { Paper } = Widgets

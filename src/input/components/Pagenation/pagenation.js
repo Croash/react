@@ -4,23 +4,38 @@ import Pagination from 'rc-pagination'
 import 'rc-pagination/assets/index.css'
 
 class Pagenation extends Component {
-  state = {
-    current: 12,
-    pageSize: 5
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      current: 12,
+      pageSize: 5
+    }
+  }
+
   onChange = (page) => {
+    const { onChange } = this.props
     console.log(page)
+    onChange(page)
     this.setState({
       current: page
     })
   }
   render() {
-    return (<Pagination 
-      onChange={this.onChange} 
-      current={this.state.current}
-      pageSize={this.state.pageSize}
+    const {
+      defaultSize = 8,
+      pageSize = this.state.pageSize,
+      current = this.state.current
+    } = this.props
+    return (<Pagination
+      defaultCurrent={34}
+      current={current}
+
+      defaultPageSize={defaultSize}
+      pageSize={pageSize}
+
       hideOnSinglePage={true}
-      total={25} />)
+      onChange={this.onChange} 
+      total={99} />)
   }
 }
 
