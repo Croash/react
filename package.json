@@ -7,8 +7,7 @@
     "@material-ui/core": "^1.2.1",
     "@material-ui/icons": "^1.1.0",
     "eslint-config-rackt": "^1.1.1",
-    "json-loader": "^0.5.7",
-    "konva-szl-charts": "^0.0.2",
+
     "material-ui": "^0.20.0",
     "rc-pagination": "^1.17.0",
     "react": "^16.2.0",
@@ -21,7 +20,8 @@
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
     "svg.js": "^2.6.4",
-    "xadmin": "^1.0.20"
+    "xadmin": "^1.0.20",
+    "yargs": "^12.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -51,6 +51,7 @@
     "eslint-plugin-promise": "^1.0.8",
     "eslint-plugin-react": "~6.2.0",
     "prop-types": "^15.6.1",
+    "json-loader": "^0.5.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux-devtools-extension": "^2.13.2",
